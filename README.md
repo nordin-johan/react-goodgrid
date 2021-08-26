@@ -25,8 +25,8 @@ The Container is the main wrapper for the gridsystem.
 `` <Container></Container> ``
 
 ### Props
-* fluid - if true, the container will fill the full width of the viewport.
-* className - standard React className prop.
+* fluid (boolean) - if true, the container will fill the full width of the viewport.
+* className (string) - standard React className prop.
 
 ## Row
 
@@ -36,10 +36,10 @@ A Row is a wrapper for one or multiple columns(cols).
 `` <Row></Row> ``
 
 ### Props
-* align - start | center | end - vertical alignment of columns inside the row.
-* justify - start | center | end - horizontal alignment of columns inside the row.
-* gutter - 0 | 10 | 20 | 30 - controls distance between columns inside the row.
-* className - standard React className prop.
+* align (string) - start | center | end - vertical alignment of columns inside the row.
+* justify (string) - start | center | end - horizontal alignment of columns inside the row.
+* gutter (number) - 0 | 10 | 20 | 30 - controls distance between columns inside the row.
+* className (string) - standard React className prop.
 
 ## Col
 
@@ -50,9 +50,9 @@ A Row is a wrapper for one or multiple columns(cols).
 A col is a column inside the gridsystem.
 
 ### Props
-* xs - Mobile portrait
-* sm - Mobile landscape
-* md - Tablet
-* lg - Laptop
-* xl - Laptop large
-* className - standard React className prop.
+* xs (number) - Mobile portrait
+* sm (number) - Mobile landscape
+* md (number) - Tablet
+* lg (number) - Laptop
+* xl (number) - Laptop large
+* className (string) - standard React className prop.
