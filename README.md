@@ -1,18 +1,16 @@
-React js grid
+## React Goodgrid
 
-## Ammhm a grid yes
+A simple gridsystem for React.
 
-yes grid yes
-
-### Container
+## Container
 
 fluid | classname
 
-### Row
+## Row
 
 align | justify | gutter-0 gutter-10 gutter-20 gutter-30 
 
-### Col
+## Col
 
 xs | sm | md | lg | xl
 
