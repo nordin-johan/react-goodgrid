@@ -2,6 +2,10 @@
 
 A simple 12-colum gridsystem for React.
 
+## Compability
+
+All modern browsers which supports the CSS flex property.
+
 ## Usage
 
 ### Install the package
