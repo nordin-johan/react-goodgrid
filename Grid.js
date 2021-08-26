@@ -4,7 +4,7 @@ class Container extends React.Component {
 
     render() {
 
-        let classes = [1];
+        let classes = [];
 
         if (this.props.fluid) {
             classes.push('fluid');

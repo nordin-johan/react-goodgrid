@@ -1,28 +1,54 @@
 # React Goodgrid
 
-A simple gridsystem for React.
+A simple 12-colum gridsystem for React.
 
 ## Usage
 
 ### Install the package
-``` git clone https://github.com/nordin-johan/react-goodgrid.git ```
+`` git clone https://github.com/nordin-johan/react-goodgrid.git ``
 
 ### Import the gridsystem components
-``` import { Container, Row, Col } from 'react-goodgrid/Grid' ```
+`` import { Container, Row, Col } from 'react-goodgrid/Grid' ``
 
 ### Import stylesheet for gridsystem
-``` import 'react-goodgrid/styles.css' ```
+`` import 'react-goodgrid/styles.css' ``
 
 ## Container
 
-fluid | classname
+The Container is the main wrapper for the gridsystem.
+
+### Usage
+`` <Container></Container> ``
+
+### Props
+* fluid - if true, the container will fill the full width of the viewport.
+* className - standard React className prop.
 
 ## Row
 
-align | justify | gutter-0 gutter-10 gutter-20 gutter-30 
+A Row is a wrapper for one or multiple columns(cols).
+
+### Usage
+`` <Row></Row> ``
+
+### Props
+* align - start | center | end - vertical alignment of columns inside the row.
+* justify - start | center | end - horizontal alignment of columns inside the row.
+* gutter - 0 | 10 | 20 | 30 - controls distance between columns inside the row.
+* className - standard React className prop.
 
 ## Col
 
-xs | sm | md | lg | xl
+### Usage
 
-auto
+`` <Col xs={12} sm={12} md={12} lg={12} xl={6}></Col> ``
+
+A col is a column inside the gridsystem.
+
+### Props
+* xs - Mobile portrait
+* sm - Mobile landscape
+* md - Tablet
+* lg - Laptop
+* xl - Laptop large
+* className - standard React className prop.
