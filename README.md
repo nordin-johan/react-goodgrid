@@ -45,7 +45,7 @@ A Row is a wrapper for one or multiple columns(cols).
 
 ### Usage
 
-`` <Col xs={12} sm={12} md={12} lg={12} xl={6}></Col> ``
+`` <Col></Col> ``
 
 A col is a column inside the gridsystem.
 
