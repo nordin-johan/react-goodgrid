@@ -1,0 +1,265 @@
+/**
+ * Gridsystem
+ */
+
+@import 'functions';
+
+/**
+ * Breakpoints
+ */
+@breakpoint-sm: 576px;
+@breakpoint-md: 768px;
+@breakpoint-lg: 992px;
+@breakpoint-xl: 1200px;
+
+/**
+ * Container breakpoint width
+ */
+@container-width-sm: 540px;
+@container-width-md: 720px;
+@container-width-lg: 960px;
+@container-width-xl: 1140px;
+
+/**
+ * Core
+ */
+@-ms-viewport {
+	width: device-width;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+/**
+ * Container 
+ */
+.container {
+
+	margin-left: auto;
+	margin-right: auto;
+	padding-right: 15px;
+	padding-left: 15px;
+	max-width: 100%;
+
+	@media (min-width: @breakpoint-sm) {
+		width: @container-width-sm;
+	}
+
+	@media (min-width: @breakpoint-md) {
+		width: @container-width-md;
+	}
+
+	@media (min-width: @breakpoint-lg) {
+		width: @container-width-lg;
+	}
+
+	@media (min-width: @breakpoint-xl) {
+		width: @container-width-xl;
+	}
+
+	&.fluid {
+		width: 100%;
+	}
+
+}
+
+
+/**
+ * Row
+ */
+.row {
+
+	display: flex;
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+
+	/* vertical*/
+	&.align-start {
+		align-items: flex-start;
+	}
+
+	&.align-center {
+		align-items: center;
+	}
+
+	&.align-end {
+		align-items: flex-end;
+	}
+
+	/* horizontal */
+	&.justify-start {
+		justify-content: flex-start;
+	}
+
+	&.justify-center {
+		justify-content: center;
+	}
+
+	&.justify-end {
+		justify-content: flex-end;
+	}
+
+	&.gutter-0 {
+
+		margin-right: 0;
+		margin-left: 0;
+
+		> .col,  > [class*='col-'] {
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+	}
+
+	&.gutter-10 {
+
+		margin-right: -5px;
+		margin-left: -5px;
+
+		> .col,  > [class*="col-"] {
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+
+	}
+
+	&.gutter-20 {
+
+		margin-right: -10px;
+		margin-left: -10px;
+
+		> .col,  > [class*="col-"] {
+			padding-left: 10px;
+			padding-right: 10px;
+		}
+
+	}
+
+	&.gutter-30 {
+
+		margin-right: -15px;
+		margin-left: -15px;
+
+		> .col,  > [class*="col-"] {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+
+	}
+
+}
+
+/**
+ * Columns
+ */
+.col, [class*="col-"] {
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.col {
+	flex: 1 0;
+	max-width: 100%;
+}
+
+.col-auto {
+	flex: 0 0 auto;
+	width: auto;
+}
+
+.gen-cols(12, false);
+.gen-margins(60, t, top, false);
+.gen-margins(60, b, bottom, false);
+.gen-margins(20, l, left, false);
+.gen-margins(20, r, right, false);
+
+@media (min-width: @breakpoint-sm) {
+
+	.col-sm {
+		flex: 1 0;
+		max-width: 100%;
+	}
+
+	.col-sm-auto {
+		flex: 0 0 auto;
+		width: auto;
+	}
+
+	.gen-cols(12, sm);
+	.gen-margins(60, t, top, sm);
+	.gen-margins(60, b, bottom, sm);
+	.gen-margins(20, l, left, sm);
+	.gen-margins(20, r, right, sm);
+
+}
+
+@media (min-width: @breakpoint-md) {
+
+	.col-md {
+		flex: 1 0;
+		max-width: 100%;
+	}
+
+	.col-md-auto {
+		flex: 0 0 auto;
+		width: auto;
+	}
+
+	.gen-cols(12, md);
+	.gen-margins(60, t, top, md);
+	.gen-margins(60, b, bottom, md);
+	.gen-margins(20, l, left, md);
+	.gen-margins(20, r, right, md);
+
+}
+
+@media (min-width: @breakpoint-lg) {
+
+	.col-lg {
+		flex: 1 0;
+		max-width: 100%;
+	}
+
+	.col-lg-auto {
+		flex: 0 0 auto;
+		width: auto;
+	}
+
+	.gen-cols(12, lg);
+	.gen-margins(60, t, top, lg);
+	.gen-margins(60, b, bottom, lg);
+	.gen-margins(20, l, left, lg);
+	.gen-margins(20, r, right, lg);
+
+}
+
+@media (min-width: @breakpoint-xl) {
+
+	.col-xl {
+		flex: 1 0;
+		max-width: 100%;
+	}
+
+	.col-xl-auto {
+		flex: 0 0 auto;
+		width: auto;
+	}
+
+	.gen-cols(12, xl);
+	.gen-margins(60, t, top, xl);
+	.gen-margins(60, b, bottom, xl);
+	.gen-margins(20, l, left, xl);
+	.gen-margins(20, r, right, xl);
+
+}

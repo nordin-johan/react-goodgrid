@@ -1,0 +1,49 @@
+/**
+ * Functions
+ */
+
+/**
+ * Generate cols
+ */
+.gen-cols(@n, @attribute, @i: 1) when (@i =< @n) {
+
+	@width: (@i * 100% / @n);
+
+	.generate(@attribute) when (@attribute = false) {
+		.col-@{i} {
+			flex: 0 0 @width;
+			max-width: @width;
+		}
+	}
+	.generate(@attribute) when (not(@attribute = false)) {
+		.col-@{attribute}-@{i} {
+			flex: 0 0 @width;
+			max-width: @width;
+		}
+	}
+
+	.generate(@attribute);
+	.gen-cols(@n, @attribute, (@i + 1));
+
+}
+
+/**
+ * Generate margins
+ */
+.gen-margins(@n, @name, @direction, @attribute, @i: 0) when (@i =< @n) {
+
+	.generate(@attribute) when (@attribute = false) {
+		.m@{name}-@{i} {
+			margin-@{direction}: ~'@{i}px';
+		}
+	}
+	.generate(@attribute) when (not(@attribute = false)) {
+		.m@{name}-@{attribute}-@{i} {
+			margin-@{direction}: ~'@{i}px';
+		}
+	}
+
+	.generate(@attribute);
+	.gen-margins(@n, @name, @direction, @attribute, (@i + 5));
+
+}
